@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
         canShoot = true;
     }
 
-    // bullet instaniation
+    // bullet instaniater
     void Shoot()
     {
         Instantiate(playerBullet, firePoint.position, firePoint.rotation);

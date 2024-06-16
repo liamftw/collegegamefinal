@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CollisionController : MonoBehaviour
@@ -13,7 +12,7 @@ public class CollisionController : MonoBehaviour
         {
             Debug.Log("HIT!");
 
-            // plays the hit sound effect
+            // Play the audio clip
             if (source != null && clip != null)
             {
                 source.PlayOneShot(clip);
