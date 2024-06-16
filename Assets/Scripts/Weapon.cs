@@ -6,6 +6,8 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject playerBullet;
     private bool canShoot = true;
+    public AudioSource source;
+    public AudioClip clip;
 
     public void Shooting()
     {
@@ -18,12 +20,19 @@ public class Weapon : MonoBehaviour
     IEnumerator ShootWithDelay()
     {
         Shoot();
+
+        // plays the shoot sound effect
+        if (source != null && clip != null)
+        {
+            source.PlayOneShot(clip);
+        }
+
         canShoot = false;
         yield return new WaitForSeconds(0.1f);
         canShoot = true;
     }
 
-    // The method that actually instantiates the bullet
+    // bullet instaniation
     void Shoot()
     {
         Instantiate(playerBullet, firePoint.position, firePoint.rotation);
