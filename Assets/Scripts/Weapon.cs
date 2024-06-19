@@ -28,7 +28,7 @@ public class Weapon : MonoBehaviour
         }
 
         canShoot = false;
-        yield return new WaitForSeconds(0.08f);
+        yield return new WaitForSeconds(0.12f);
         canShoot = true;
     }
 

@@ -22,7 +22,7 @@ public class playerHealth : MonoBehaviour
 
         if (clydeHealth == 0)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("LoseScreen");
         }
 
         for (int i = 0; i < clydeHearts.Length; i++)
